@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Form - Form Filler Pro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        
+        .form-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+        }
+        
+        .form-section h2 {
+            margin-top: 0;
+            color: #333;
+            font-size: 1.2em;
+        }
+        
+        .submit-btn {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .instructions {
+            background-color: #e8f4fd;
+            border: 1px solid #3498db;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .instructions h3 {
+            margin-top: 0;
+            color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Test Form for Form Filler Pro</h1>
+        
+        <div class="instructions">
+            <h3>Testing Instructions:</h3>
+            <ol>
+                <li>Install the Form Filler Pro extension</li>
+                <li>Set up a profile in the extension options</li>
+                <li>Click the extension icon and use "Fill Form"</li>
+                <li>Watch as the form fields get automatically filled!</li>
+            </ol>
+        </div>
+        
+        <form id="testForm">
+            <!-- Standard Name Fields -->
+            <div class="form-section">
+                <h2>Standard Name Fields</h2>
+                
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter your first name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                </div>
+            </div>
+            
+            <!-- Alternative Name Fields -->
+            <div class="form-section">
+                <h2>Alternative Field Names</h2>
+                
+                <div class="form-group">
+                    <label for="fname">First Name (fname):</label>
+                    <input type="text" id="fname" name="fname" placeholder="Alternative first name field">
+                </div>
+                
+                <div class="form-group">
+                    <label for="lname">Last Name (lname):</label>
+                    <input type="text" id="lname" name="lname" placeholder="Alternative last name field">
+                </div>
+                
+                <div class="form-group">
+                    <label for="emailAddress">Email (emailAddress):</label>
+                    <input type="text" id="emailAddress" name="emailAddress" placeholder="Alternative email field">
+                </div>
+            </div>
+            
+            <!-- Full Name Field -->
+            <div class="form-section">
+                <h2>Full Name Field</h2>
+                
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+                </div>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="form-section">
+                <h2>Contact Information</h2>
+
+                <div class="form-group">
+                    <label for="contactEmail">Contact Email:</label>
+                    <input type="email" id="contactEmail" name="contactEmail" placeholder="Your contact email">
+                </div>
+
+                <div class="form-group">
+                    <label for="userEmail">User Email:</label>
+                    <input type="email" id="userEmail" name="userEmail" placeholder="Your user email">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile:</label>
+                    <input type="tel" id="mobile" name="mobile" placeholder="Your mobile number">
+                </div>
+            </div>
+
+            <!-- Account Information -->
+            <div class="form-section">
+                <h2>Account Information</h2>
+
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Your username">
+                </div>
+
+                <div class="form-group">
+                    <label for="login">Login:</label>
+                    <input type="text" id="login" name="login" placeholder="Your login">
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company:</label>
+                    <input type="text" id="company" name="company" placeholder="Your company">
+                </div>
+
+                <div class="form-group">
+                    <label for="organization">Organization:</label>
+                    <input type="text" id="organization" name="organization" placeholder="Your organization">
+                </div>
+            </div>
+            
+            <!-- Fields that should NOT be filled -->
+            <div class="form-section">
+                <h2>Fields That Should NOT Be Filled</h2>
+                
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="This should not be filled">
+                </div>
+                
+                <div class="form-group">
+                    <label for="creditCard">Credit Card:</label>
+                    <input type="text" id="creditCard" name="creditCard" placeholder="This should not be filled">
+                </div>
+                
+                <div class="form-group">
+                    <label for="hiddenField">Hidden Field:</label>
+                    <input type="text" id="hiddenField" name="hiddenField" style="display: none;" placeholder="This should not be filled">
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit Form</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById('testForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form submitted! (This is just a test - no data was actually sent)');
+        });
+        
+        // Add some visual feedback when fields are filled
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('input', function() {
+                if (this.value) {
+                    this.style.backgroundColor = '#e8f5e8';
+                } else {
+                    this.style.backgroundColor = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

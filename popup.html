@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Filler Pro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="popup-body">
+    <div class="popup-container">
+        <header class="popup-header">
+            <h1>Form Filler Pro</h1>
+            <div class="powered-by">Powered by <a href="https://nuvocode.com" target="_blank"><strong>Nuvo Code</strong></a></div>
+        </header>
+
+        <main class="popup-main">
+            <!-- Active Profile Display -->
+            <section class="active-profile-section">
+                <h2>Active Profile</h2>
+                <div id="activeProfileDisplay" class="active-profile-display">
+                    <!-- Active profile info will be loaded here -->
+                </div>
+                <div id="noActiveProfile" class="no-active-profile" style="display: none;">
+                    <p>No active profile set.</p>
+                    <button id="openOptionsBtn" class="btn btn-secondary">Set up profiles</button>
+                </div>
+            </section>
+
+            <!-- Profile Switcher (Bonus Feature) -->
+            <section class="profile-switcher-section" id="profileSwitcherSection" style="display: none;">
+                <h3>Quick Switch</h3>
+                <div class="form-group">
+                    <label for="profileSelect">Switch Profile:</label>
+                    <select id="profileSelect" class="profile-select">
+                        <option value="">Select a profile...</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Actions -->
+            <section class="actions-section">
+                <button id="fillFormBtn" class="btn btn-primary btn-large" disabled>
+                    Fill Form
+                </button>
+                <div class="secondary-actions">
+                    <button id="manageProfilesBtn" class="btn btn-secondary">
+                        Manage Profiles
+                    </button>
+                </div>
+            </section>
+
+            <!-- Status Messages -->
+            <div id="statusMessage" class="status-message" style="display: none;"></div>
+        </main>
+    </div>
+
+    <script src="storage.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

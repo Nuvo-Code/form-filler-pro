@@ -1,0 +1,374 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+/* Container Styles */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+header h1 {
+  color: #2c3e50;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #7f8c8d;
+  font-size: 1.1em;
+}
+
+.powered-by {
+  color: #95a5a6;
+  font-size: 0.9em;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.powered-by strong {
+  color: #3498db;
+  font-weight: 600;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+}
+
+.btn-secondary {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #7f8c8d;
+}
+
+.btn-danger {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c0392b;
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.btn-large {
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.btn:disabled:hover {
+  background-color: #bdc3c7;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Profile Form */
+.profile-form {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+/* Profiles List */
+.profiles-list {
+  display: grid;
+  gap: 15px;
+}
+
+.profile-card {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.profile-card:hover {
+  border-color: #3498db;
+  box-shadow: 0 2px 10px rgba(52, 152, 219, 0.1);
+}
+
+.profile-card.active {
+  border-color: #27ae60;
+  background-color: #f8fff8;
+}
+
+.profile-info h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.active-badge {
+  background: #27ae60;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.profile-info p {
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.profile-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* No Profiles Message */
+.no-profiles {
+  text-align: center;
+  padding: 40px 20px;
+  color: #7f8c8d;
+}
+
+/* Message Styles */
+.message {
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Popup Specific Styles */
+.popup-body {
+  width: 350px;
+  margin: 0;
+  background: white;
+}
+
+.popup-container {
+  padding: 20px;
+}
+
+.popup-header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.popup-header h1 {
+  font-size: 1.5em;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.popup-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.active-profile-section h2 {
+  font-size: 1.1em;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.active-profile-display {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 15px;
+}
+
+.profile-name {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.profile-details {
+  color: #555;
+  margin-bottom: 3px;
+}
+
+.profile-email {
+  color: #7f8c8d;
+  font-size: 0.9em;
+}
+
+.profile-phone,
+.profile-company {
+  color: #7f8c8d;
+  font-size: 0.85em;
+  margin-top: 3px;
+}
+
+.no-active-profile {
+  text-align: center;
+  padding: 20px;
+  color: #7f8c8d;
+}
+
+.profile-switcher-section h3 {
+  font-size: 1em;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.profile-select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.actions-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.secondary-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.status-message {
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.status-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.status-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+  
+  header h1 {
+    font-size: 2em;
+  }
+  
+  .profile-actions {
+    flex-direction: column;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+}

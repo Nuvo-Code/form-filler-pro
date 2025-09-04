@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Icon Generator for Form Filler Pro</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .icon-preview { margin: 20px 0; }
+        canvas { border: 1px solid #ccc; margin: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Form Filler Pro - Icon Generator</h1>
+    <p>This page generates the required icon files for the Chrome extension.</p>
+    
+    <div class="icon-preview">
+        <h3>16x16 Icon</h3>
+        <canvas id="icon16" width="16" height="16"></canvas>
+        
+        <h3>48x48 Icon</h3>
+        <canvas id="icon48" width="48" height="48"></canvas>
+        
+        <h3>128x128 Icon</h3>
+        <canvas id="icon128" width="128" height="128"></canvas>
+    </div>
+    
+    <button onclick="downloadIcons()">Download Icons</button>
+    
+    <script>
+        function drawIcon(canvas, size) {
+            const ctx = canvas.getContext('2d');
+            
+            // Background
+            ctx.fillStyle = '#3498db';
+            ctx.fillRect(0, 0, size, size);
+            
+            // Form icon (simplified)
+            const padding = size * 0.2;
+            const formWidth = size - (padding * 2);
+            const formHeight = size - (padding * 2);
+            
+            // Form background
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(padding, padding, formWidth, formHeight);
+            
+            // Form lines
+            ctx.fillStyle = '#3498db';
+            const lineHeight = size * 0.08;
+            const lineSpacing = size * 0.15;
+            const lineWidth = formWidth * 0.7;
+            const startX = padding + (formWidth - lineWidth) / 2;
+            
+            for (let i = 0; i < 3; i++) {
+                const y = padding + (formHeight * 0.3) + (i * lineSpacing);
+                ctx.fillRect(startX, y, lineWidth, lineHeight);
+            }
+        }
+        
+        // Draw icons
+        drawIcon(document.getElementById('icon16'), 16);
+        drawIcon(document.getElementById('icon48'), 48);
+        drawIcon(document.getElementById('icon128'), 128);
+        
+        function downloadIcons() {
+            ['16', '48', '128'].forEach(size => {
+                const canvas = document.getElementById(`icon${size}`);
+                const link = document.createElement('a');
+                link.download = `icon${size}.png`;
+                link.href = canvas.toDataURL();
+                link.click();
+            });
+        }
+    </script>
+</body>
+</html>

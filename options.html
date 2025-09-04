@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Filler Pro - Options</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Form Filler Pro - Options</h1>
+            <p>Manage your autofill profiles</p>
+            <div class="powered-by">Powered by <a href="https://nuvocode.com" target="_blank"><strong>Nuvo Code</strong></a></div>
+        </header>
+
+        <main>
+            <!-- Add New Profile Section -->
+            <section class="add-profile-section">
+                <h2>Add New Profile</h2>
+                <form id="profileForm" class="profile-form">
+                    <div class="form-group">
+                        <label for="name">Profile Name:</label>
+                        <input type="text" id="name" name="name" placeholder="e.g., Personal, Work" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone (optional):</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="username">Username (optional):</label>
+                        <input type="text" id="username" name="username" placeholder="johndoe">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company (optional):</label>
+                        <input type="text" id="company" name="company" placeholder="Nuvo Code">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" id="saveBtn" class="btn btn-primary">Add Profile</button>
+                        <button type="button" id="cancelBtn" class="btn btn-secondary" style="display: none;">Cancel</button>
+                    </div>
+                </form>
+                
+                <div id="formMessage" class="message" style="display: none;"></div>
+            </section>
+
+            <!-- Profiles List Section -->
+            <section class="profiles-section">
+                <h2>Your Profiles</h2>
+                <div id="profilesList" class="profiles-list">
+                    <!-- Profiles will be dynamically loaded here -->
+                </div>
+                <div id="noProfiles" class="no-profiles" style="display: none;">
+                    <p>No profiles found. Add your first profile above!</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="storage.js"></script>
+    <script src="options.js"></script>
+</body>
+</html>
