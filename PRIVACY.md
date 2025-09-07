@@ -119,7 +119,6 @@ Email: Contact form available on our website
 ### Permissions Used
 The extension requests these Chrome permissions:
 - **storage**: To save your profiles locally
-- **scripting**: To fill forms on web pages
 - **activeTab**: To access the current page for form filling
 
 ### Data Format

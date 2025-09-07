@@ -59,9 +59,8 @@ The extension automatically detects and fills the following types of form fields
 ## Technical Details
 
 - **Manifest Version**: 3 (latest Chrome extension standard)
-- **Permissions**: 
+- **Permissions**:
   - `storage` - for saving profiles
-  - `scripting` - for form filling functionality
   - `activeTab` - for accessing the current page
 - **Storage**: Uses `chrome.storage.sync` for cross-device synchronization
 
